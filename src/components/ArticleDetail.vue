@@ -41,7 +41,7 @@ export default {
              let article = articles.data.data
              let dt = []
              article.forEach(v => {
-                (v.id === articleId) ? dt.push(v) : ''
+                (v.id === articleId) ? dt.push(v) : '';
              });
                 this.items = dt
           });
