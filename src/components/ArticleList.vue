@@ -32,11 +32,10 @@ export default {
       data ({to: {params: {categoryId}}}) {
           let dt = []
           return server.getDetail().then(list => {
+//                      console.log(list);
               let datas = list.data.data
               datas.forEach(v=> {
-                if(v.category_id === categoryId){
-                    dt.push(v)
-                 }
+                (v.category_id === categoryId)?dt.push(v):'';
               });
               this.items = dt
           });
